@@ -1,4 +1,4 @@
-# exercicios_programacao
+# Exercício 1 -> Descriptografando
 Uma das maneiras mais eficientes para se fazer comunicação entre partes, de modo que somente o escritor e leitor possam entender a mensagem é encriptar (criptografar) as mensagens.
 Para tal, há diversas maneiras de se fazer isso. Cada uma delas possui seus tradeoffs. Algumas são relativamente fáceis de se implementar, porém relativamente simples de quebrar a criptografia (quebra de criptogafia: um terceiro pode ler a mensagem).
 
