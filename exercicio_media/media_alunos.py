@@ -24,6 +24,10 @@ def faz_a_media_da_sala(notas_dos_alunos: list, numero_de_alunos_da_sala: int):
     return media_da_sala
 
 
+def faz_o_sort_pelo_segundo_valor_da_tupla(tupla: tuple):
+    return tupla[1]
+
+
 def faz_as_perguntas_pro_usuario_e_monta_o_dicionario_com_as_informacoes():
     quantidade_de_alunos_da_sala = int(input("Quantos alunos tem na sala?\n -"))
 
@@ -64,10 +68,6 @@ def retorna_a_media_da_sala(dicionario_com_as_informacoes: dict):
     return media_da_sala
 
 
-def faz_o_sort_pelo_segundo_valor_da_tupla(tupla: tuple):
-    return tupla[1]
-
-
 def retorna_a_menor_e_a_maior_media_da_sala(dicionario_com_as_informacoes: dict):
     lista_de_tuplas_com_os_nomes_e_medias = retorna_uma_lista_de_tuplas_com_o_nome_dos_alunos_e_suas_medias(dicionario_com_as_informacoes)
     lista_de_tuplas_com_os_nomes_e_medias.sort(key=faz_o_sort_pelo_segundo_valor_da_tupla)
@@ -92,5 +92,12 @@ def retorna_os_alunos_aprovados(dicionario_com_as_informacoes: dict):
 
 if __name__ == "__main__":
     dicionario_com_todas_as_informacoes = faz_as_perguntas_pro_usuario_e_monta_o_dicionario_com_as_informacoes()
-    print(retorna_os_alunos_aprovados(dicionario_com_todas_as_informacoes))
-    print(dicionario_com_todas_as_informacoes)
+    lista_de_tuplas_com_nome_e_media_dos_alunos = retorna_uma_lista_de_tuplas_com_o_nome_dos_alunos_e_suas_medias(dicionario_com_todas_as_informacoes)
+    menor_media_da_sala,  maior_media_da_sala= retorna_a_menor_e_a_maior_media_da_sala(dicionario_com_todas_as_informacoes)
+    lista_de_tuplas_com_alunos_aprovados = retorna_os_alunos_aprovados(dicionario_com_todas_as_informacoes)
+
+    print(lista_de_tuplas_com_alunos_aprovados)
+    print(menor_media_da_sala, "-", maior_media_da_sala)
+    print(lista_de_tuplas_com_alunos_aprovados)
+
+
